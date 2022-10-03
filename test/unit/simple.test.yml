@@ -1,0 +1,9 @@
+---
+configuration:
+  description: Sample test
+  locale: en-GB
+  dynamo: mock
+
+---
+- test: Launch request
+- LaunchRequest: Skill launched

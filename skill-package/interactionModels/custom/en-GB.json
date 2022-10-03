@@ -1,0 +1,109 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "test skill",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AnswerIntent",
+          "slots": [
+            {
+              "name": "answer",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{answer}"
+              ]
+            }
+          ],
+          "samples": [
+            "answer is {answer}",
+            "word is {answer}",
+            " {answer}",
+            "my answer is {answer}",
+            "the answer is {answer}"
+          ]
+        },
+        {
+          "name": "UnsureIntent",
+          "slots": [],
+          "samples": [
+            "do not know",
+            "i pass",
+            "skip word",
+            "skip question",
+            "i\u0027ve no idea",
+            "i\u0027m unsure",
+            "no idea",
+            "i do not know",
+            "don\u0027t know",
+            "I don\u0027t know"
+          ]
+        },
+        {
+          "name": "AMAZON.StartOverIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": []
+        }
+      ],
+      "types": [],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "AnswerIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "answer",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.860802268738.859338201233"
+              }
+            }
+          ],
+          "delegationStrategy": "SKILL_RESPONSE"
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    }
+  },
+  "version": "23"
+}
